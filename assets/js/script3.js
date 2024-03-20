@@ -1,0 +1,2 @@
+
+function portletshowhide(id){if(document.getElementById(id).style.display==='none'){document.getElementById(id).style.display='block';document.getElementById('label_'+id).innerHTML='cacher';}else{document.getElementById(id).style.display='none';document.getElementById('label_'+id).innerHTML='ajouter \u00e0 votre site';}};
