@@ -14718,8 +14718,11 @@ body.site--institutionnel.site--institutionnel .sr-only-focusable:focus {
     clip: auto;
 }
 
-body.site--institutionnel.site--institutionnel .header__logo {
-    filter: invert(1);
+body.site--institutionnel.site--institutionnel .header__logo .logo_head_noir {
+    display: none;
+}
+body.site--institutionnel.site--institutionnel .header__logo .logo_head_blanc {
+    display: block;
 }
 
 body.site--institutionnel.site--institutionnel .menu_institutionnel {
@@ -15073,13 +15076,20 @@ body.site--institutionnel.site--institutionnel .menu_institutionnel {
     }
 
     body.site--institutionnel.site--institutionnel .header__logo {
-        filter: none;
         flex-shrink: 0;
         height: 2.75rem;
         margin-bottom: 0;
         margin-right: 2rem;
         padding-top: 0 !important;
     }
+
+    body.site--institutionnel.site--institutionnel .header__logo .logo_head_noir {
+        display: block;
+    }
+    body.site--institutionnel.site--institutionnel .header__logo .logo_head_blanc {
+        display: none;
+    }
+
 }
 
 @media screen and (min-width:1024px) and (min-width:1024px) {
@@ -15527,6 +15537,8 @@ body>footer .button-link {
     font-weight: 300;
 }
 
+/* -------------------------------------------FOOTER LOGO CONTENU--------------------- */
+
 body>footer .footer__logo__contenu {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -15536,9 +15548,23 @@ body>footer .footer__logo__contenu {
     margin-left: auto;
     margin-right: auto;
     margin-top: 3px;
-    max-width: 10rem;
+    max-width: 20rem;
     text-align: center;
+    font-size: 1.2rem;
     width: 100%;
+}
+
+body>footer .footer__logo__contenu h2 {
+    padding-left: 20px; 
+    padding-top: 10px; 
+    border-radius: 5px; 
+    background-color: white;
+}
+
+body>footer .footer__logo__lien h2 {
+    padding: 0 20px;
+    border-radius: 5px; 
+    background-color: white;
 }
 
 body>footer .footer__logo__contenu .footer__logo__baseline {
@@ -15554,6 +15580,7 @@ body>footer .footer__logo__contenu .footer__logo__baseline {
         max-width: none;
         padding-left: 6rem;
         padding-right: 6rem;
+        text-align: center;
         width: 25%;
     }
 
@@ -15590,7 +15617,7 @@ body>footer .footer__logo__lien {
     margin-left: auto;
     margin-right: auto;
     margin-top: 3px;
-    max-width: 10rem;
+    max-width: 20rem;
     text-align: center;
     width: 100%;
 }
@@ -15601,7 +15628,7 @@ body>footer .footer__logo__lien {
         margin-bottom: 0;
         margin-left: 0;
         margin-right: 0;
-        max-width: none;
+        max-width: 20rem;
         padding-left: 6rem;
         padding-right: 6rem;
         width: 25%;
@@ -15627,10 +15654,11 @@ body>footer .menu_pied_page {
     align-items: flex-start;
     display: flex;
     flex-wrap: wrap;
-    font-size: 0.9375rem;
+    font-size: 1.2rem;
     justify-content: space-between;
     padding: 0;
     width: 100%;
+    text-align: center;
 }
 
 @media screen and (min-width:1024px) {
@@ -15751,21 +15779,22 @@ body.site--institutionnel.site--institutionnel footer h2 {
 }
 
 body.site--institutionnel.site--institutionnel .footer__logo__lien {
-    max-width: none;
+    max-width: 20rem;
 }
 
 @media screen and (min-width:1024px) {
     body.site--institutionnel.site--institutionnel .footer__logo__contenu {
-        padding: 0;
-        width: 12.5rem;
+        padding: 0 2.5rem;
+        /* width: 12.5rem; */
+        font-size: 1.2rem;
     }
 }
 
 @media screen and (min-width:1024px) {
     body.site--institutionnel.site--institutionnel .footer__logo__lien--right {
-        margin-right: 4rem;
+        /* margin-right: 4rem; */
         padding: 0;
-        width: 8rem;
+        /* width: 8rem; */
     }
 }
 
@@ -15773,9 +15802,9 @@ body.site--institutionnel.site--institutionnel .footer__logo__lien {
     align-items: center;
     display: flex;
     flex-wrap: wrap;
-    gap: 0.875em;
-    justify-content: flex-start;
-    margin: 1em 0;
+    gap: 1em;
+    justify-content: center;
+    margin: 1.5rem 0;
     padding: 0;
 }
 
@@ -15862,10 +15891,10 @@ body .menu__toggle.close-menu.button-link:focus {
     background-color: transparent;
     color: #ffffff;
     font-weight: bold;
-    opacity: 0;
-    position: absolute;
-    right: calc(100% + 0.5rem);
-    top: 1em;
+    opacity: 50;
+    /* position: absolute; */
+    /* right: calc(100% + 0.5rem); */
+    /* top: 1em; */
     text-transform: uppercase;
     transition: visibility 0s linear 0.4s, right 0.4s ease-out, opacity 0.4s ease-out;
     visibility: hidden;
@@ -15903,7 +15932,7 @@ body .menu__toggle.show-menu.close-menu.button-link:focus {
 }
 
 .menu__footer {
-    bottom: 0;
+    /* bottom: 0; */
     display: inline-block;
     left: 0;
     overflow: hidden;
@@ -15982,7 +16011,7 @@ body .menu__toggle.show-menu.close-menu.button-link:focus {
     background-color: #000000;
     color: #ffffff;
     display: inline-block;
-    height: 4rem;
+    /* height: 4rem; */
     overflow-x: auto;
     overflow-y: hidden;
     text-align: center;
@@ -15993,9 +16022,9 @@ body .menu__toggle.show-menu.close-menu.button-link:focus {
 
 .menu__footer__social li {
     display: inline-block;
-    height: 4rem;
+    /* height: 4rem; */
     margin: 0 0.75rem;
-    line-height: 4rem;
+    /* line-height: 4rem; */
     width: 1.5rem;
 }
 
@@ -16020,9 +16049,9 @@ body .menu__toggle.show-menu.close-menu.button-link:focus {
 .menu__footer__social li .button-transparent img,
 .menu__footer__social li .button-link img {
     display: inline-block;
-    height: 1.5rem;
+    /* height: 1.5rem; */
     vertical-align: middle;
-    width: 1.5rem;
+    /* width: 1.5rem; */
 }
 
 body {
@@ -19375,7 +19404,7 @@ body.fiche.ficheaccueil .tabsCard__tab__tab.active {
 }
 
 #body.ficheaccueil .reseauxsociauxCard {
-    background-color: #ffffff;
+    background-color: transparent;
     display: inline-block;
     position: relative;
 }
@@ -22212,13 +22241,15 @@ body.fiche.ficheaccueil.layout--nantesuniv .entete-video-card .entete-video-card
 body.fiche.ficheaccueil.layout--nantesuniv .entete-video-card .entete-video-card__accroche {
     display: block;
     font-family: "beatrice", Arial, "Helvetica Neue", Helvetica, "Bitstream Vera Sans", sans-serif;
-    font-size: 2em;
+    font-size: 2.5em;
     font-weight: 600;
+    text-align: center;
 }
 
 @media screen and (min-width:720px) {
     body.fiche.ficheaccueil.layout--nantesuniv .entete-video-card .entete-video-card__accroche {
         font-size: 3em;
+        text-align: left;
     }
 }
 
